@@ -72,11 +72,11 @@ public class MomentumExecutor {
 
                 Cooldown.setCooldown(player, "telepad", config.getCooldown(), playerCooldowns);
             } else if ("unknown".equals(type)) {
-                Main.logger.error("Type required was telepad, but only {} was found!", type);
+                Init.logger.error("Type required was telepad, but only {} was found!", type);
                 return;
             }
         } catch (NullPointerException e) {
-            Main.logger.error("Destination corners missing! Error: {}", e.getMessage());
+            Init.logger.error("Destination corners missing! Error: {}", e.getMessage());
         }
 
         Double vertical_strength = config.getVertical_strength();
@@ -91,11 +91,11 @@ public class MomentumExecutor {
 
                 Cooldown.setCooldown(player, "launchpad", config.getCooldown(), playerCooldowns);
             } else if ("unknown".equals(type)) {
-                Main.logger.error("Type required was launchpad, but only " + type + " was found!");
+                Init.logger.error("Type required was launchpad, but only " + type + " was found!");
                 return;
             }
         } catch (NullPointerException e) {
-            Main.logger.error("Strength value(s) missing! Error: " + e.getMessage());
+            Init.logger.error("Strength value(s) missing! Error: " + e.getMessage());
         }
 
         String soundEvent = config.getSound().getSound_event();
