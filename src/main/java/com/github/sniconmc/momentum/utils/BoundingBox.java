@@ -1,6 +1,6 @@
 package com.github.sniconmc.momentum.utils;
 
-import com.github.sniconmc.momentum.Init;
+import com.github.sniconmc.momentum.Main;
 import com.github.sniconmc.momentum.config.MomentumConfig;
 import net.minestom.server.coordinate.Pos;
 
@@ -24,7 +24,7 @@ public class BoundingBox {
                     playerLocation.blockZ() >= minZ && playerLocation.blockZ() <= maxZ;
         } else {
 
-            Init.logger.debug("didn't check Y");
+            Main.logger.debug("didn't check Y");
             return playerLocation.blockX() >= minX && playerLocation.blockX() <= maxX &&
                     playerLocation.blockZ() >= minZ && playerLocation.blockZ() <= maxZ;
         }

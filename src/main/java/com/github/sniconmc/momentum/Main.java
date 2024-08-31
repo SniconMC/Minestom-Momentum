@@ -4,16 +4,17 @@ import com.github.sniconmc.momentum.listener.MomentumListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Init {
+public class Main {
 
-    public static final Logger logger = LoggerFactory.getLogger(Init.class);
+    public static final Logger logger = LoggerFactory.getLogger(Main.class);
 
-    public static void main(String[] args) {
+    public static Main init() {
 
         logger.info("Momentum initialized");
 
         MomentumManager momentumManager = new MomentumManager();
 
         MomentumListener momentumListener = new MomentumListener();
+        return new Main();
     }
 }

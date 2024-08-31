@@ -1,6 +1,6 @@
 package com.github.sniconmc.momentum.utils;
 
-import com.github.sniconmc.momentum.Init;
+import com.github.sniconmc.momentum.Main;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 
@@ -37,13 +37,13 @@ public class LoadMomentum {
     public Map<String, String> load(File parentFolder) {
 
         if (!parentFolder.exists() || !parentFolder.isDirectory()) {
-            Init.logger.warn("Parent folder does not exist or is not a directory: {}", parentFolder.getAbsolutePath());
+            Main.logger.warn("Parent folder does not exist or is not a directory: {}", parentFolder.getAbsolutePath());
             boolean hasCreated = parentFolder.mkdirs();
 
             if (hasCreated) {
-                Init.logger.info("Created folder '{}'!", parentFolder.getName());
+                Main.logger.info("Created folder '{}'!", parentFolder.getName());
             } else {
-                Init.logger.warn("Failed to create folder '{}'!", parentFolder.getName());
+                Main.logger.warn("Failed to create folder '{}'!", parentFolder.getName());
             }
 
         }
@@ -67,7 +67,7 @@ public class LoadMomentum {
         File[] files = folder.listFiles();
 
         if (files == null) {
-            Init.logger.warn("The {} folder does not contain any files", folder.getName());
+            Main.logger.warn("The {} folder does not contain any files", folder.getName());
             return new HashSet<>();
         }
 
@@ -102,7 +102,7 @@ public class LoadMomentum {
     private static Map<String, String> processJsonFiles(Set<File> files, File parentFolder) {
 
         if (files == null || files.isEmpty()) {
-            Init.logger.warn("The {} folder does not contain any json files", parentFolder.getName());
+            Main.logger.warn("The {} folder does not contain any json files", parentFolder.getName());
             return new HashMap<>();
         }
 
@@ -117,10 +117,10 @@ public class LoadMomentum {
 
             } catch (JsonSyntaxException | JsonIOException e) {
                 // Handle Gson-specific errors
-                Init.logger.error("Error parsing JSON file: {}", file.getName());
+                Main.logger.error("Error parsing JSON file: {}", file.getName());
             } catch (IOException e) {
                 // Handle IO errors
-                Init.logger.error("Error loading file in folder '{}' file: {}", parentFolder.getName(), file.getName());
+                Main.logger.error("Error loading file in folder '{}' file: {}", parentFolder.getName(), file.getName());
             }
         }
 

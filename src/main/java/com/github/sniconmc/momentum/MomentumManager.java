@@ -63,10 +63,10 @@ public class MomentumManager {
 
             } catch (JsonSyntaxException | JsonIOException e) {
                 // Handle Gson-specific errors
-                Init.logger.error("Error parsing JSON in: {}", fileName);
+                Main.logger.error("Error parsing JSON in: {}", fileName);
             } catch (Exception e) {
                 // Handle any other unexpected exceptions
-                Init.logger.error("Unexpected error in: {}", fileName);
+                Main.logger.error("Unexpected error in: {}", fileName);
             }
         }
 
