@@ -1,4 +1,4 @@
-package com.github.sniconmc.data;
+package com.github.sniconmc.momentum.data;
 
 import net.minestom.server.entity.Entity;
 import net.minestom.server.entity.Player;

@@ -1,6 +1,6 @@
-package com.github.sniconmc.hologram;
+package com.github.sniconmc.momentum.hologram;
 
-import com.github.sniconmc.text.TextUtils;
+import com.github.sniconmc.utils.text.TextUtils;
 import net.minestom.server.coordinate.Pos;
 import net.minestom.server.entity.Entity;
 import net.minestom.server.entity.EntityType;

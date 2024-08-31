@@ -1,9 +1,9 @@
-package com.github.sniconmc.utils;
+package com.github.sniconmc.momentum.utils;
 
-import com.github.sniconmc.MomentumManager;
-import com.github.sniconmc.config.MomentumConfig;
-import com.github.sniconmc.data.MomentumHologramHolder;
-import com.github.sniconmc.hologram.HologramText;
+import com.github.sniconmc.momentum.MomentumManager;
+import com.github.sniconmc.momentum.config.MomentumConfig;
+import com.github.sniconmc.momentum.data.MomentumHologramHolder;
+import com.github.sniconmc.momentum.hologram.HologramText;
 import net.minestom.server.entity.Entity;
 import net.minestom.server.entity.Player;
 

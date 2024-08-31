@@ -1,6 +1,6 @@
-package com.github.sniconmc.utils;
+package com.github.sniconmc.momentum.utils;
 
-import com.github.sniconmc.Main;
+import com.github.sniconmc.momentum.Main;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 

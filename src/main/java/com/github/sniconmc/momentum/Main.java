@@ -1,6 +1,6 @@
-package com.github.sniconmc;
+package com.github.sniconmc.momentum;
 
-import com.github.sniconmc.listener.MomentumListener;
+import com.github.sniconmc.momentum.listener.MomentumListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

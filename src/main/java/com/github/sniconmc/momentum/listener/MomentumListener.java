@@ -1,17 +1,13 @@
-package com.github.sniconmc.listener;
+package com.github.sniconmc.momentum.listener;
 
-import com.github.sniconmc.MomentumExecutor;
-import com.github.sniconmc.MomentumManager;
-import com.github.sniconmc.data.MomentumHologramHolder;
-import com.github.sniconmc.utils.HologramUtils;
+import com.github.sniconmc.momentum.MomentumExecutor;
+import com.github.sniconmc.momentum.MomentumManager;
+import com.github.sniconmc.momentum.utils.HologramUtils;
 import net.minestom.server.MinecraftServer;
-import net.minestom.server.entity.Entity;
 import net.minestom.server.entity.Player;
 import net.minestom.server.event.GlobalEventHandler;
 import net.minestom.server.event.player.PlayerMoveEvent;
 import net.minestom.server.event.player.PlayerSpawnEvent;
-
-import java.util.List;
 
 public class MomentumListener {
     private final GlobalEventHandler momentumNode;

@@ -3,7 +3,7 @@ plugins {
     id("maven-publish")
 }
 
-group = "com.github.sniconmc"
+group = "com.github.sniconmc.momentum"
 version = "0.1-dev"
 description = "Movement-oriented dependency for the SniconMC server network"
 
@@ -20,7 +20,7 @@ dependencies {
     implementation("net.minestom:minestom-snapshots:65f75bb059") // Minestom
     implementation("ch.qos.logback:logback-classic:1.5.7") // Logback
     implementation("net.kyori:adventure-text-minimessage:4.17.0") // MiniMessage
-    implementation("com.github.SniconMC:Minestom-Utils:0.1.3")
+    implementation("com.github.SniconMC:Minestom-Utils:0.1.4")
 }
 
 tasks.withType<JavaCompile> {

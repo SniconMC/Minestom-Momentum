@@ -1,18 +1,17 @@
-package com.github.sniconmc;
+package com.github.sniconmc.momentum;
 
-import com.github.sniconmc.config.MomentumConfig;
-import com.github.sniconmc.data.MomentumConfigHolder;
-import com.github.sniconmc.data.MomentumHologramHolder;
-import com.github.sniconmc.placeholder.PlaceholderReplacer;
-import com.github.sniconmc.utils.HologramUtils;
-import com.github.sniconmc.utils.LoadMomentum;
+import com.github.sniconmc.momentum.config.MomentumConfig;
+import com.github.sniconmc.momentum.data.MomentumConfigHolder;
+import com.github.sniconmc.momentum.data.MomentumHologramHolder;
+import com.github.sniconmc.utils.placeholder.PlaceholderReplacer;
+import com.github.sniconmc.momentum.utils.HologramUtils;
+import com.github.sniconmc.momentum.utils.LoadMomentum;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import net.minestom.server.entity.Player;
 
-import javax.swing.plaf.PanelUI;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;

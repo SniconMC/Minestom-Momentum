@@ -1,4 +1,4 @@
-package com.github.sniconmc.config;
+package com.github.sniconmc.momentum.config;
 
 /**
  * Represents the configuration for a momentum system.

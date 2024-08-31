@@ -1,23 +1,18 @@
-package com.github.sniconmc;
+package com.github.sniconmc.momentum;
 
-import com.github.sniconmc.config.MomentumConfig;
-import com.github.sniconmc.config.MomentumCoordinates;
-import com.github.sniconmc.data.MomentumConfigHolder;
-import com.github.sniconmc.listener.MomentumListener;
-import com.github.sniconmc.sound.SoundUtils;
-import com.github.sniconmc.utils.BoundingBox;
-import com.github.sniconmc.utils.Cooldown;
-import com.github.sniconmc.utils.Destination;
-import com.github.sniconmc.utils.PadType;
+import com.github.sniconmc.momentum.config.MomentumConfig;
+import com.github.sniconmc.momentum.config.MomentumCoordinates;
+import com.github.sniconmc.momentum.data.MomentumConfigHolder;
+import com.github.sniconmc.utils.sound.SoundUtils;
+import com.github.sniconmc.momentum.utils.BoundingBox;
+import com.github.sniconmc.momentum.utils.Cooldown;
+import com.github.sniconmc.momentum.utils.Destination;
+import com.github.sniconmc.momentum.utils.PadType;
 import net.kyori.adventure.sound.Sound;
 import net.minestom.server.MinecraftServer;
 import net.minestom.server.coordinate.Pos;
 import net.minestom.server.coordinate.Vec;
 import net.minestom.server.entity.Player;
-import net.minestom.server.event.EventFilter;
-import net.minestom.server.event.EventNode;
-import net.minestom.server.event.player.PlayerMoveEvent;
-import net.minestom.server.event.trait.PlayerEvent;
 
 import java.util.HashMap;
 import java.util.List;

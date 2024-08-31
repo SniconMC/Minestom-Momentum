@@ -1,6 +1,5 @@
-package com.github.sniconmc.utils;
+package com.github.sniconmc.momentum.utils;
 
-import com.github.sniconmc.config.MomentumConfig;
 import net.minestom.server.entity.Player;
 
 import java.util.HashMap;

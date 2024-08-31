@@ -1,6 +1,6 @@
-package com.github.sniconmc.data;
+package com.github.sniconmc.momentum.data;
 
-import com.github.sniconmc.config.MomentumConfig;
+import com.github.sniconmc.momentum.config.MomentumConfig;
 import net.minestom.server.entity.Player;
 
 /**

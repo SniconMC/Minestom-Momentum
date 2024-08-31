@@ -1,4 +1,4 @@
-package com.github.sniconmc.config;
+package com.github.sniconmc.momentum.config;
 
 import net.minestom.server.coordinate.Pos;
 

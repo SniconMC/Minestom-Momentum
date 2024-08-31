@@ -1,7 +1,7 @@
-package com.github.sniconmc.commands;
+package com.github.sniconmc.momentum.commands;
 
-import com.github.sniconmc.MomentumManager;
-import com.github.sniconmc.text.TextUtils;
+import com.github.sniconmc.momentum.MomentumManager;
+import com.github.sniconmc.utils.text.TextUtils;
 import net.minestom.server.command.builder.Command;
 import net.minestom.server.command.builder.arguments.ArgumentType;
 import net.minestom.server.entity.Player;

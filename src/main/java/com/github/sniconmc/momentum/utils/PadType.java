@@ -1,6 +1,6 @@
-package com.github.sniconmc.utils;
+package com.github.sniconmc.momentum.utils;
 
-import com.github.sniconmc.config.MomentumConfig;
+import com.github.sniconmc.momentum.config.MomentumConfig;
 
 public class PadType {
 
