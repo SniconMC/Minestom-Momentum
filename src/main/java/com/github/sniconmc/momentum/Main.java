@@ -17,16 +17,6 @@ public class Main {
 
         MomentumManager momentumManager = new MomentumManager();
 
-        /*MomentumListener momentumListener = new MomentumListener();*/
-    }
-
-/*    public static Main init() {
-
-        logger.info("Momentum initialized");
-
-        MomentumManager momentumManager = new MomentumManager();
-
         MomentumListener momentumListener = new MomentumListener();
-        return new Main();
-    }*/
+    }
 }
