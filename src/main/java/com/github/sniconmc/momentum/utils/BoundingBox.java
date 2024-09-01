@@ -11,9 +11,9 @@ public class BoundingBox {
         Pos corner2 = config.getCorners().getCorner2();
 
         int minX = Math.min(corner1.blockX(), corner2.blockX());
-        int maxX = Math.max(corner1.blockX(), corner2.blockX());
+        int maxX = Math.max(corner1.blockX(), corner2.blockX()) + 1;
         int minZ = Math.min(corner1.blockZ(), corner2.blockZ());
-        int maxZ = Math.max(corner1.blockZ(), corner2.blockZ());
+        int maxZ = Math.max(corner1.blockZ(), corner2.blockZ()) + 1;
 
         if (checkY) {
             double minY = Math.min(corner1.blockY(), corner2.blockY());
