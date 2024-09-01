@@ -40,6 +40,7 @@ public class MomentumManager {
     public static void reloadMomentum(Player player) {
 
         dataFileJSONData = new LoadMomentum().load(dataFolder);
+        HologramUtils.unloadHologramsFromList(HologramUtils.getHologramEntities(player), player);
         initiateMomentumPads(player);
 
     }

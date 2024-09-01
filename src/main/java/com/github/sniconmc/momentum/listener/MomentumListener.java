@@ -31,8 +31,6 @@ public class MomentumListener {
         momentumNode.addListener(PlayerSpawnEvent.class, event -> {
             Player player = event.getPlayer();
 
-            HologramUtils.unloadHologramsFromList(HologramUtils.getHologramEntities(player), player);
-
             MomentumManager.initiateMomentumPads(player);
         });
     }
