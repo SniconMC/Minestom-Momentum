@@ -38,12 +38,6 @@ public class MomentumExecutor {
     public static void isOnMomentumPad(MomentumConfig config, Player player, String filename) {
 
         Pos playerPos = player.getPosition();
-        Pos comparedPos = oldPos.get(player);
-
-        if(comparedPos == null || !playerPos.sameView(comparedPos.yaw(), comparedPos.pitch())){
-            oldPos.put(player, playerPos);
-            return;
-        }
 
         if (!BoundingBox.isWithinBounds(config, playerPos, true)) {
             return;
@@ -63,6 +57,15 @@ public class MomentumExecutor {
 
         try {
             if ("telepad".equals(type) && config.getDestination_corners() != null) {
+
+                Pos playerPos = player.getPosition();
+                Pos comparedPos = oldPos.get(player);
+
+                if(comparedPos == null || !playerPos.sameView(comparedPos.yaw(), comparedPos.pitch())){
+                    oldPos.put(player, playerPos);
+                    return;
+                }
+
                 MomentumCoordinates coordinates = config.getDestination_corners();
                 Pos corner1 = coordinates.getCorner1();
                 Pos corner2 = coordinates.getCorner2();
