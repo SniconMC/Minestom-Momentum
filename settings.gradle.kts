@@ -1,2 +1,2 @@
-rootProject.name = "Minestom-Momentum"
+rootProject.name = "Momentum"
 

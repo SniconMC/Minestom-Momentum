@@ -5,7 +5,7 @@ plugins {
 
 group = "com.github.sniconmc.momentum"
 version = "0.1-dev"
-description = "Movement-oriented dependency for the SniconMC server network"
+description = "Movement-related dependency for the SniconMC Network"
 
 repositories {
     mavenCentral()
@@ -41,9 +41,9 @@ publishing {
             from(components["java"])
 
             pom{
-                name = "Minestom-Momentum"
+                name = "Momentum"
                 description = project.description
-                url = "https://github.com/SniconMC/Minestom-Momentum"
+                url = "https://github.com/SniconMC/Momentum"
                 licenses {
                     license {
                         name = "The GNU Affero General Public License Version 3"
