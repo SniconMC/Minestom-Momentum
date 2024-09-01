@@ -1,18 +1,15 @@
 package com.github.sniconmc.momentum;
 
-import com.github.sniconmc.momentum.data.MomentumHologramHolder;
 import com.github.sniconmc.momentum.listener.MomentumListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
+public class MomentumMain {
 
-public class Main {
-
-    public static final Logger logger = LoggerFactory.getLogger(Main.class);
+    public static final Logger logger = LoggerFactory.getLogger(MomentumMain.class);
 
 
-    public static void main(String[] args) {
+    public static void init() {
         logger.info("Momentum initialized");
 
         MomentumManager momentumManager = new MomentumManager();

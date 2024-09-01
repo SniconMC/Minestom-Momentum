@@ -1,6 +1,6 @@
 package com.github.sniconmc.momentum.utils;
 
-import com.github.sniconmc.momentum.Main;
+import com.github.sniconmc.momentum.MomentumMain;
 import com.github.sniconmc.momentum.config.MomentumConfig;
 import net.minestom.server.coordinate.Pos;
 import net.minestom.server.entity.Player;
@@ -32,17 +32,17 @@ public class Destination {
             // not a portal
             if (destination1Y != destination2Y) {
                 // still has differing Y levels
-                Main.logger.warn("Telepad '" + fileName + "' is not a portal, but still has differing Y destinations!");
-                Main.logger.warn("Y coordinate defaulting to smaller value");
+                MomentumMain.logger.warn("Telepad '" + fileName + "' is not a portal, but still has differing Y destinations!");
+                MomentumMain.logger.warn("Y coordinate defaulting to smaller value");
             }
             finalY = Math.min(corner1.blockY(), corner2.blockY()) + 1;
         } else if (isPortal == null) {
             // Handle the case where is_portal is missing
-            Main.logger.warn("Telepad type not declared in the JSON file! Assuming horizontal...");
+            MomentumMain.logger.warn("Telepad type not declared in the JSON file! Assuming horizontal...");
             finalY = Math.min(corner1.blockY(), corner2.blockY()) + 1;
         } else {
             // Handle the case where is_portal is incorrectly set (e.g., "flase")
-            Main.logger.warn("Telepad '" + fileName + "' has invalid is_portal value '" + isPortal + "'. Assuming horizontal...");
+            MomentumMain.logger.warn("Telepad '" + fileName + "' has invalid is_portal value '" + isPortal + "'. Assuming horizontal...");
             finalY = Math.min(corner1.blockY(), corner2.blockY()) + 1;
         }
 
