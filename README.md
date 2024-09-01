@@ -1,2 +1,2 @@
 # Minestom-Momentum
-Momentum module for Minestom server
+Momentum dependency for the SniconMC Network
