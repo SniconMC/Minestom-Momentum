@@ -28,7 +28,7 @@ public class MomentumCommand extends Command {
             String actionString = commandContext.get(reloadArgument).toString();
 
             if (actionString.equalsIgnoreCase("reload")){
-                MomentumManager.reloadMomentum(player);
+                MomentumManager.reloadMomentum();
                 player.sendMessage(TextUtils.convertStringToComponent(List.of("<green>Reloaded Momentum</green>")));
             }
         }, reloadArgument);

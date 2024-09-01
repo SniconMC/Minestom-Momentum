@@ -10,6 +10,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
+import net.minestom.server.MinecraftServer;
 import net.minestom.server.entity.Player;
 
 import java.io.File;
@@ -37,12 +38,14 @@ public class MomentumManager {
 
     }
 
-    public static void reloadMomentum(Player player) {
+    public static void reloadMomentum() {
 
         dataFileJSONData = new LoadMomentum().load(dataFolder);
-        HologramUtils.unloadHologramsFromList(HologramUtils.getHologramEntities(player), player);
-        initiateMomentumPads(player);
 
+        for (Player player : MinecraftServer.getConnectionManager().getOnlinePlayers()) {
+            HologramUtils.unloadHologramsFromList(HologramUtils.getHologramEntities(player), player);
+            initiateMomentumPads(player);
+        }
     }
 
     public static void initiateMomentumPads(Player player) {

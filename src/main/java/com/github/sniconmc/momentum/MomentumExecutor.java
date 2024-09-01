@@ -79,7 +79,8 @@ public class MomentumExecutor {
                 return;
             }
         } catch (NullPointerException e) {
-            MomentumMain.logger.error("Destination corners missing! Error: {}", e.getMessage());
+            MomentumMain.logger.error("Data in {} file missing! Error: {}", filename, e.getMessage());
+            return;
         }
 
         Double vertical_strength = config.getVertical_strength();
@@ -92,13 +93,20 @@ public class MomentumExecutor {
                 Vec vector = playerLocation.direction().mul(directional_strength * 20).withY(vertical_strength * 20);
                 player.setVelocity(vector);
 
-                Cooldown.setCooldown(player, "launchpad", config.getCooldown(), playerCooldowns);
+                if (config.getCooldown() == null) {
+                    MomentumMain.logger.error("Cooldown missing! Setting to 200...");
+                    Cooldown.setCooldown(player, "launchpad", 200, playerCooldowns);
+                } else {
+                    Cooldown.setCooldown(player, "launchpad", config.getCooldown(), playerCooldowns);
+                }
+
             } else if ("unknown".equals(type)) {
-                MomentumMain.logger.error("Type required was launchpad, but only " + type + " was found!");
+                MomentumMain.logger.error("Type required was launchpad, but only {} was found!", type);
                 return;
             }
         } catch (NullPointerException e) {
-            MomentumMain.logger.error("Strength value(s) missing! Error: " + e.getMessage());
+            MomentumMain.logger.error("Strength value(s) missing! Error: {}", e.getMessage());
+            return;
         }
 
         String soundEvent = config.getSound().getSound_event();
