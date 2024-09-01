@@ -1,2 +1,2 @@
-# Minestom-Momentum
+# Momentum
 Momentum dependency for the SniconMC Network
