@@ -20,7 +20,7 @@ dependencies {
     implementation("net.minestom:minestom-snapshots:65f75bb059") // Minestom
     implementation("ch.qos.logback:logback-classic:1.5.7") // Logback
     implementation("net.kyori:adventure-text-minimessage:4.17.0") // MiniMessage
-    implementation("com.github.SniconMC:Minestom-Utils:0.1.4")
+    implementation("com.github.SniconMC:Minestom-Utils:0.1.5")
 }
 
 tasks.withType<JavaCompile> {
