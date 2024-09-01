@@ -15,6 +15,17 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Represents a hologram text entity that can be displayed to players.
+ * Provides functionality to make hologram text visible or despawn it for specific players.
+ *
+ * @see TextUtils
+ * @see Player
+ * @see Entity
+ * @see Pos
+ *
+ * @author znopp and Wi1helm
+ */
 public class HologramText extends Entity {
 
     private String uuid;
@@ -23,6 +34,13 @@ public class HologramText extends Entity {
     private Pos parentPos;
     private List<String> text;
 
+    /**
+     * Constructs a new {@link HologramText} entity.
+     *
+     * @param rowId The row ID of the hologram text.
+     * @param position The position of the hologram text in the world.
+     * @param text The text to display as a hologram.
+     */
     public HologramText(int rowId, @NotNull Pos position, List<String> text) {
         super(EntityType.TEXT_DISPLAY);
         this.rowId = rowId;
@@ -36,7 +54,11 @@ public class HologramText extends Entity {
         });
     }
 
-    // Send packets to make the NPC visible only to a specific player
+    /**
+     * Makes the hologram text visible to a specific player.
+     *
+     * @param player The player to make the hologram visible to.
+     */
     public void makeVisibleTo(@NotNull Player player) {
         Map<Integer, Metadata.Entry<?>> entries = metadata.getEntries();
 
@@ -45,7 +67,11 @@ public class HologramText extends Entity {
         player.sendPacket(new EntityMetaDataPacket(this.getEntityId(), entries));
     }
 
-    // Despawn the NPC for a specific player
+    /**
+     * Despawns the hologram text for a specific player.
+     *
+     * @param player The player to despawn the hologram for.
+     */
     public void despawnForPlayer(@NotNull Player player) {
         player.sendPacket(new DestroyEntitiesPacket(getEntityId()));
         this.remove();

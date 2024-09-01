@@ -8,26 +8,44 @@ import net.minestom.server.entity.Player;
 
 import java.util.List;
 
+/**
+ * Represents the command handler for the "momentum" command.
+ * Provides subcommands for interacting with the Momentum plugin.
+ *
+ * @see MomentumManager
+ * @see TextUtils
+ * @see Command
+ * @see Player
+ *
+ * @author znopp and Wi1helm
+ */
 public class MomentumCommand extends Command {
 
+    /**
+     * Initializes the "momentum" command with its subcommands and their corresponding logic.
+     * Currently supports the "reload" subcommand for reloading Momentum-related configurations.
+     */
     public MomentumCommand() {
         super("momentum");
 
+        // Sets the default executor for the "momentum" command when no subcommands are specified.
         setDefaultExecutor((commandSender, commandContext) -> {
-            return;
+            return;  // No action for default executor
         });
 
+        // Argument for the "reload" subcommand
         var reloadArgument = ArgumentType.Literal("reload");
 
+        // Adds the "reload" subcommand syntax and its corresponding execution logic
         addSyntax((commandSender, commandContext) -> {
-
-            if (!(commandSender instanceof Player player)){
-                return;
+            if (!(commandSender instanceof Player player)) {
+                return;  // Command can only be executed by a player
             }
 
             String actionString = commandContext.get(reloadArgument).toString();
 
-            if (actionString.equalsIgnoreCase("reload")){
+            // If the "reload" subcommand is specified, reload Momentum configurations
+            if (actionString.equalsIgnoreCase("reload")) {
                 MomentumManager.reloadMomentum();
                 player.sendMessage(TextUtils.convertStringToComponent(List.of("<green>Reloaded Momentum</green>")));
             }
