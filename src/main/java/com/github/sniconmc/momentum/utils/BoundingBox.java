@@ -19,14 +19,14 @@ public class BoundingBox {
             double minY = Math.min(corner1.blockY(), corner2.blockY());
             double maxY = Math.max(corner1.blockY(), corner2.blockY()) + 1;
 
-            return playerLocation.blockX() >= minX && playerLocation.blockX() <= maxX &&
+            return playerLocation.x() >= minX && playerLocation.x() <= maxX &&
                     playerLocation.y() >= minY && playerLocation.y() <= maxY &&
-                    playerLocation.blockZ() >= minZ && playerLocation.blockZ() <= maxZ;
+                    playerLocation.z() >= minZ && playerLocation.z() <= maxZ;
         } else {
 
             MomentumMain.logger.debug("didn't check Y");
-            return playerLocation.blockX() >= minX && playerLocation.blockX() <= maxX &&
-                    playerLocation.blockZ() >= minZ && playerLocation.blockZ() <= maxZ;
+            return playerLocation.x() >= minX && playerLocation.x() <= maxX &&
+                    playerLocation.z() >= minZ && playerLocation.z() <= maxZ;
         }
     }
 
