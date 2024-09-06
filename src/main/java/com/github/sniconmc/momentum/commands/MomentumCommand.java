@@ -47,7 +47,7 @@ public class MomentumCommand extends Command {
             // If the "reload" subcommand is specified, reload Momentum configurations
             if (actionString.equalsIgnoreCase("reload")) {
                 MomentumManager.reloadMomentum();
-                player.sendMessage(TextUtils.convertStringToComponent(List.of("<green>Reloaded Momentum</green>")));
+                player.sendMessage(TextUtils.convertStringToComponent("<green>Reloaded Momentum</green>"));
             }
         }, reloadArgument);
     }

@@ -49,7 +49,7 @@ public class HologramText extends Entity {
 
         editEntityMeta(TextDisplayMeta.class, meta -> {
             meta.setHasNoGravity(true);
-            meta.setText(TextUtils.convertStringToComponent(text));
+            meta.setText(TextUtils.convertStringListToComponent(text));
             meta.setBillboardRenderConstraints(AbstractDisplayMeta.BillboardConstraints.CENTER);
         });
     }
